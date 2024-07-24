@@ -20,16 +20,16 @@ count = 0
 pp =0
 num = int(input('請輸入數字:'))
 for i in range(2,num+1):           # 小於數值的所有數字
-    for j in range(2,num):         # 數值判斷是否為質數
+    pp == True
+    for j in range(2,i+1):         # 數值判斷是否為質數
         if i%j == 0:
-            pp = pp + 1            # 不是質數     
+            pp = False            # 不是質數
+            break     
 
-    if pp == 0:
-        count = count + 1          # 是質數
-        pp = 0
-    else:
-        pp = 0
-        break
+    if pp:
+        print(i)
+        count = count + 1
+ 
 
         
 print('\n',end='') 
